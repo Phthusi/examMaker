@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="examMaker.css">
+    <title>exam maker</title>
+</head>
+<body>
+    <section id="top">
+        <h1>
+            EXAM CREATOR
+        </h1>
+    </section>
+    <main>
+        <section id="left">
+            <div id="left-top">
+                <div class="search">
+                    <img src="images/search.png" alt="">
+                    <input type="search" placeholder="search">
+                    <button>search</button>
+                </div>
+                <div class="sort-options">
+                    <span>
+                        <input type="radio" name="sort-opt" value="" checked="">
+                        <label for="">Sort by date</label>
+                    </span>
+                    <span>
+                        <input type="radio" name="sort-opt" value="">
+                        <label for="">Sort by name</label>
+                    </span>
+                </div>
+            </div>
+            <div id="left-middle">
+                <p>
+                    there are no exams here
+                </p>
+            </div>
+            <div id="left-bottom">
+                <button id="add-exam">Add exam</button>
+            </div>
+        </section>        
+        <section id="right">
+            <div id="right-top">
+                <div id="exam-name">
+                    <form class="set-time" id="set-title">
+                        <label for="title">Title: </label>
+                        <input type="text" id="title" placeholder="title" required="" fdprocessedid="bfwt">
+                        <input type="submit" value="set title" fdprocessedid="to751">
+                    </form>
+                </div>
+                <div id="exam-duration">
+                    <form class="set-time" id="set-time">
+                        <label for="hours">Hours:</label>
+                        <input type="number" min="0" max="23" value="0" id="hours" required="" fdprocessedid="ezobg3">
+                        <label for="minutes">Minutes:</label>
+                        <input type="number" min="0" max="59" value="0" id="minutes" required="" fdprocessedid="p4t146">
+                        <label for="seconds">Seconds:</label>
+                        <input type="number" min="0" max="59" value="0" id="seconds" required="" fdprocessedid="6dx5k4">
+                        <input type="submit" value="set time" fdprocessedid="6u207b">
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
