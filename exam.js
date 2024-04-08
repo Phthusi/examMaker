@@ -1,14 +1,8 @@
-class Exam{
-    exams = {}
-    constructor(examCreatedDate, examName, examContent, examDurationTime){
-        this.examCreatedDate = examCreatedDate;
-        this.examName = examName;
-        this.examContent = examContent;
-        this.examDurationTime = examDurationTime;
-        exams[examName] = this;
-    }
+export class Exam{
 
-    sortExams(){
-
+    constructor(box,content){
+        this.box = box;
+        this.content = content;
     }
+    
 }

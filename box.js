@@ -1,8 +1,5 @@
-class ExamContent{
-
+class Box{
     constructor(){
-
+        
     }
 }
-
-

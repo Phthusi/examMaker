@@ -3,6 +3,10 @@ export class MyDate{
         this.date = new Date();
     }
 
+    constructor(years,months=0,days=0,hours=0,minutes=0,seconds=0,nanoseconds=0){
+        this.date = new Date(years,months,days,hours,minutes,seconds,nanoseconds);
+    }
+
     getMonths(){
         let months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
         return months;

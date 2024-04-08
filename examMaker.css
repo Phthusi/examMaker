@@ -21,7 +21,7 @@ body{
 }
 
 main{
-    min-height: 87.2vh;
+    max-height: 87.2vh;
     display: flex;
     flex-direction: row;
 }
@@ -35,7 +35,10 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;    
+    align-items: center;
+    max-height: 50hv; 
+    overflow-y: scroll;
+    overflow-x: hidden;   
 }
 
 #left .exam-item{
@@ -46,29 +49,13 @@ main{
 }
 
 #left .exam-item:hover{
-    background-color: white;
-    border: 2px solid salmon;
+    opacity: 0.9;
+    border-width: 3px;
 }
 
 
 #left .exam-item img{
     width: 18px;
-}
-
-#left-middle .exam-item{
-    display: flex;
-    flex-direction: column;
-}
-
-#left-middle .exam-item h1{
-    align-self: center;
-}
-
-#left-middle .exam-item .item-content{
-    display: flex;
-    flex-direction: row;
-    justify-content:space-evenly;
-    align-items: center;
 }
 
 #left-top{
@@ -78,13 +65,8 @@ main{
     position: sticky;
     top: 0;
     left: 0;
-}
-
-#right{
-    flex-basis: 75%;
-    border: 5px solid #ccc;
-    border-top: none;
-    border-left: none;
+    background-image: url("images/martin-adams-_OZCl4XcpRw-unsplash.jpg");
+    padding-bottom: 10px;
 }
 
 .search{
@@ -114,7 +96,7 @@ main{
     width: 15px;
 }
 
-.sort-options{
+.sort-options #sort-options-form{
     background-color: rgba(255, 255, 255, 0.386);
     display: flex;
     justify-content: space-around;
@@ -123,9 +105,54 @@ main{
     color: white;
 }
 
+#left-middle .exam-item{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+#left-middle .exam-item h1{
+    align-self: center;
+    max-width: 15vw;
+    overflow-x:hidden;
+}
+
+#left-middle .exam-item .item-content{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+
+#left-bottom button{
+    width: 23vw;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+#left-bottom{
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    background-image: url("images/martin-adams-_OZCl4XcpRw-unsplash.jpg");
+    padding-top: 10px;
+}
+
+#right{
+    flex-basis: 75%;
+    border: 5px solid #ccc;
+    border-top: none;
+    border-left: none;
+}
+
 #right-top{
     display: flex;
     justify-content: space-between;
+}
+
+.set-time #hours,.set-time #minutes,.set-time #seconds{
+    width: 40px;
 }
 
 #exam-name,#exam-duration{
@@ -138,10 +165,6 @@ main{
 #right-top{
     background-color: black;
     border-bottom: 5px solid white;
-}
-
-#exam-duration input{
-    
 }
 
 #right-middle{
@@ -173,8 +196,4 @@ main{
     width: 35px;
 }
 
-#left-bottom button{
-    width: 23vw;
-    padding: 15px;
-    margin-bottom: 10px;
-}
+
