@@ -16,17 +16,17 @@
             <div id="left-top">
                 <div class="search">
                     <img src="images/search.png" alt="">
-                    <input type="search" placeholder="search">
-                    <button>search</button>
+                    <input type="search" placeholder="search" id="search-exam">
+                    <!-- <button>search</button> -->
                 </div>
                 <div class="sort-options">
                     <form action="" id="sort-options-form">
                         <span>
-                            <input type="radio" name="sort-opt" value="" checked="">
+                            <input type="radio" name="sort-opt" value="sortByDate" checked="">
                             <label for="">Sort by date</label>
                         </span>
                         <span>
-                            <input type="radio" name="sort-opt" value="">
+                            <input type="radio" name="sort-opt" value="sortByName">
                             <label for="">Sort by name</label>
                         </span>
                     </form>
@@ -185,5 +185,6 @@
             </div>
         </section>
     </main>
+    <script type="module" src="tryout.js"></script>
 </body>
 </html>

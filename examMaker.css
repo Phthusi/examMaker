@@ -67,6 +67,7 @@ main{
     left: 0;
     background-image: url("images/martin-adams-_OZCl4XcpRw-unsplash.jpg");
     padding-bottom: 10px;
+    z-index: 10;
 }
 
 .search{
@@ -81,16 +82,14 @@ main{
 .search input{
     border-color: transparent;
     text-align: center;
-    width: 200px;
+    width: 250px;
+    padding: 8px;
 }
 
 .search input:focus{
     outline-color: transparent;
 }
 
-.search button{
-    padding: 5px;
-}
 
 .search img{
     width: 15px;
@@ -190,6 +189,7 @@ main{
 #right-middle ul li:hover{
     background-color: white;
     border-radius: 50px;
+    cursor: pointer;
 }
 
 #right-middle img{

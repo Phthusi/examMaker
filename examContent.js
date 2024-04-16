@@ -1,7 +1,13 @@
-class ExamContent{
+class ExamContent{  
+    /*
+        contains everything that is in the exam
+        from setting exam time, to sections of questions
 
-    constructor(){
-
+        
+    */
+    questionSections = []
+    constructor(questionSection){
+        this.questionSection = questionSection;
     }
 }
 
