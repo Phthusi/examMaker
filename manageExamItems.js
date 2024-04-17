@@ -1,4 +1,5 @@
-class Search{
+export class ExamItems{
+    static exams = {}
     constructor(){
         this.sortOptForm = document.querySelector("#sort-options-form");
         this.sortBy = this.sortOptForm["sort-opt"].value;
@@ -13,7 +14,18 @@ class Search{
         /*
         fetch exams from some source i.e database or memory
         */
+       
     }
+
+    addExam(examName,exam){
+        ExamItems.exams[examName] = exam;
+        console.log(ExamItems.exams)
+    }
+
+    removeExam(examName){
+        
+    }
+    
 
     addSortTypeEventListener(){
         this.searchOptions.forEach((option)=>{
@@ -26,5 +38,16 @@ class Search{
                 console.log("changed",this.sortBy)
             });
         });
+    }
+
+    addSearchBoxEventListener(){
+        this.searchBox.addEventListener("keyup",(event)=>{
+            /* search and find exams using regex */
+            console.log(event.target.value);
+        })
+    }
+
+    saveToDb(){
+        /* here we'll save to a db */
     }
 }

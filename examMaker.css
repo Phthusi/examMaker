@@ -21,7 +21,7 @@ body{
 }
 
 main{
-    max-height: 87.2vh;
+    min-height: 87.2vh;
     display: flex;
     flex-direction: row;
 }
@@ -36,9 +36,10 @@ main{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    max-height: 50hv; 
+    /* max-height: 50hv;  */
     overflow-y: scroll;
-    overflow-x: hidden;   
+    overflow-x: hidden;
+    height: 87.2vh;
 }
 
 #left .exam-item{
@@ -143,6 +144,7 @@ main{
     border: 5px solid #ccc;
     border-top: none;
     border-left: none;
+    max-height: 87.2vh;
 }
 
 #right-top{

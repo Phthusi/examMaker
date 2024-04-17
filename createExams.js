@@ -1,26 +1,29 @@
 import { Box } from "./box.js";
 import { Exam } from "./exam.js";
+import { ExamItems } from "./manageExamItems.js";
 
 export class CreateExam{
-    exams = {};
+    static examItems = new ExamItems();
     constructor(){
         this.addExamButton = document.querySelector("#add-exam");
-        this.searchBox = document.querySelector("#search-exam");
-        console.log(this.searchBox);
-        this.addSearchBoxEventListener()
+        this.examPlace = document.querySelector("#left-middle");
+        this.addExamButtonEventListener();
     }
 
     makeExam(){
         let box = new Box();
         let content = "to fetch content";
         let exam = new Exam(box,content);
-        CreateExam.exams[box.examName] = exam;
+        // CreateExam.exams[box.examName] = exam;
+        CreateExam.examItems.addExam(box.examName,exam);
+        this.examPlace.appendChild(box.htmlContent());
+        box.addRemoveExamEventListener();
     }
 
-    addSearchBoxEventListener(){
-        this.searchBox.addEventListener("keyup",(event)=>{
-            console.log(event.target.value);
-        })
+    addExamButtonEventListener(){
+        this.addExamButton.addEventListener("click",()=>{
+            this.makeExam();
+        });
     }
 
 }
