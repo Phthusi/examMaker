@@ -36,6 +36,11 @@ export class ExamItems{
                 }
                 this.sortBy = selectedSortBy;
                 console.log("changed",this.sortBy)
+                if(this.sortBy === "sortByName"){
+                    let exams = document.querySelectorAll("exam-item");
+                    let examsPlace = document.querySelector("#left-middle");
+                    console.log(exams);
+                }
             });
         });
     }

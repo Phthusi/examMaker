@@ -83,7 +83,7 @@ main{
 .search input{
     border-color: transparent;
     text-align: center;
-    width: 250px;
+    width: 290px;
     padding: 8px;
 }
 
@@ -101,7 +101,7 @@ main{
     display: flex;
     justify-content: space-around;
     padding: 1px;
-    width: 300px;
+    width: 336px;
     color: white;
 }
 

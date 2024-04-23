@@ -16,7 +16,7 @@ export class CreateExam{
         let exam = new Exam(box,content);
         // CreateExam.exams[box.examName] = exam;
         CreateExam.examItems.addExam(box.examName,exam);
-        this.examPlace.appendChild(box.htmlContent());
+        this.examPlace.prepend(box.htmlContent());
         box.addRemoveExamEventListener();
     }
 
